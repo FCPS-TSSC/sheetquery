@@ -6,18 +6,18 @@ export type { Spreadsheet, Sheet } from 'gasmask/src/SpreadsheetApp';
  * @return {SheetQueryBuilder}
  */
 export declare function sheetQuery(activeSpreadsheet?: any): SheetQueryBuilder;
-export declare type DictObject = {
+export type DictObject = {
     [key: string]: any;
 };
-export declare type RowObject = {
+export type RowObject = {
     [key: string]: any;
     __meta: {
         row: number;
         cols: number;
     };
 };
-export declare type WhereFn = (row: RowObject) => boolean;
-export declare type UpdateFn = (row: RowObject) => RowObject;
+export type WhereFn = (row: RowObject) => boolean;
+export type UpdateFn = (row: RowObject) => RowObject;
 /**
  * SheetQueryBuilder class - Kind of an ORM for Google Sheets
  */
@@ -106,6 +106,11 @@ export declare class SheetQueryBuilder {
      * Update single row
      */
     updateRow(row: any, updateFn: UpdateFn): SheetQueryBuilder;
+    patchRows(updateFn: UpdateFn): SheetQueryBuilder;
+    /**
+     * Patch single row
+     */
+    patchRow(row: any, updateFn: UpdateFn): SheetQueryBuilder;
     /**
      * Clear cached values, headings, and flush all operations to sheet
      *
