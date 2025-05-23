@@ -1,5 +1,4 @@
 "use strict";
-//export type { Spreadsheet, Sheet } from 'gasmask/src/SpreadsheetApp';
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SheetQueryBuilder = void 0;
 exports.sheetQuery = sheetQuery;

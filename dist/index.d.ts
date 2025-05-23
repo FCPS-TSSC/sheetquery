@@ -1,3 +1,4 @@
+export type { Spreadsheet, Sheet } from 'gasmask/src/SpreadsheetApp';
 /**
  * Run new sheet query
  *
